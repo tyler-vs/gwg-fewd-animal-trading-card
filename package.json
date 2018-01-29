@@ -1,0 +1,34 @@
+{
+  "name": "fend-animal-trading-cards-master",
+  "version": "1.0.0",
+  "description": "Animal Trading Card Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "run-script-os",
+    "start:win32": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
+    "//": "Hello! If you are having trouble running this command. Try changing Firefox Developer Edition to FirefoxDeveloperEdition",
+    "start:darwin:linux": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser 'Google Chrome'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyler-vs/gwg-fewd-animal-trading-card.git"
+  },
+  "keywords": [
+    "gwg",
+    "css",
+    "fewd",
+    "js",
+    "html"
+  ],
+  "author": "tyler-vs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyler-vs/gwg-fewd-animal-trading-card/issues"
+  },
+  "homepage": "https://github.com/tyler-vs/gwg-fewd-animal-trading-card#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "run-script-os": "^1.0.3"
+  }
+}
