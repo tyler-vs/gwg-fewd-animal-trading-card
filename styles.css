@@ -9,13 +9,16 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 /*
   1. reset padding and magin on body
   2. use flexbox to center
+  3. apply css font stack
 */
 body {
   padding: 0; /*1.*/
@@ -24,9 +27,14 @@ body {
   display: flex;  /*2.*/
   flex-direction: row;  /*2.*/
   justify-content: space-around;  /*2.*/
+
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-style: normal;
+  font-variant: normal;
 }
 
-ul {
+/*reset*/
+.card__details ul {
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
@@ -34,24 +42,36 @@ ul {
   list-style: none;
 }
 
-/*Give card a fixed width*/
+/*
+  The card that contains all the content
+  1. add fixed width (300 + 10px on left and right = 320px )
+  2. margin to geive space between viewport and card
+  3. border styles
+*/
 .card {
-  width: 320px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
+  width: 320px; /*1.*/
+  padding: 10px; /*1.*/
+  margin: 10px; /*2.*/
+  border: 1px solid #ccc; /*3.*/
+  -webkit-box-shadow: 8px 4px 0 #ccc; /*3.*/
+  box-shadow: 8px 4px 0 #ccc;
+  border-radius: 4px; /*3.*/
 }
 
-/*card image is 300px wide or set to 300px*/
+/*
+  card image
+  1. image is 300px wide or set to 300px
+  2. centering of image
+  3. prvent overflow, keep within 300px
+*/
 .card__image {
-  width: 300px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  border: 1px solid transparent;
+  width: 300px; /*1.*/
+  max-width: 100%; /*1.*/
+  height: auto; /*1.*/
+  display: block; /*2.*/
+  margin-left: auto; /*2.*/
+  margin-right: auto; /*2.*/
+  overflow: hidden; /*3.*/
 }
 
 /* INSTRUCTIONS
@@ -75,9 +95,7 @@ ul {
 /* 03. border around the animal's name, image, and information*/
 
 .card__name,
-.card__image, {
-  border: 1px solid transparent;
-}
+.card__image,
 .card__details {
   border: 1px solid #ccc;
 }
@@ -85,18 +103,21 @@ ul {
 
 /* 04. border around the animal's information*/
 
-/*see above*/
+/*see 03. above*/
 
 /* 05. spacing between the animal's name, image, and information*/
 
 .card__name {
-  margin: 0;
-  padding-bottom: 10px;
+  margin: 0 0 10px 0;
+  padding: 0 10px;
 }
+
 .card__image {
-  margin: 0;
-  padding-bottom: 10px;
+  margin: 0 0 10px 0;
+  padding: 0;
 }
+
 .card__details {
-  padding: 10px;
+  padding: 0 10px;
+  border-radius: 4px;
 }
