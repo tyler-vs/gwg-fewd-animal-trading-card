@@ -1,1 +1,102 @@
 /* add your CSS here */
+
+
+/* RESETS
+-------------------------------------------------------- */
+
+/*box sizing*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+  1. reset padding and magin on body
+  2. use flexbox to center
+*/
+body {
+  padding: 0; /*1.*/
+  margin: 0;  /*1.*/
+
+  display: flex;  /*2.*/
+  flex-direction: row;  /*2.*/
+  justify-content: space-around;  /*2.*/
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  padding-bottom: 10px;
+  list-style: none;
+}
+
+/*Give card a fixed width*/
+.card {
+  width: 320px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/*card image is 300px wide or set to 300px*/
+.card__image {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+/* INSTRUCTIONS
+-------------------------------------------------------- */
+
+/* 00. italicized text for the animal's interesting fact*/
+
+.card__details p:first-of-type {
+  font-style: italic;
+}
+
+/* 01. bolded labels for the animal's list items (e.g. 'Habitat')*/
+
+.card__details ul span {
+  font-weight: bold;
+}
+
+/* 02. no dots for the animal's list items*/
+
+
+/* 03. border around the animal's name, image, and information*/
+
+.card__name,
+.card__image, {
+  border: 1px solid transparent;
+}
+.card__details {
+  border: 1px solid #ccc;
+}
+
+
+/* 04. border around the animal's information*/
+
+/*see above*/
+
+/* 05. spacing between the animal's name, image, and information*/
+
+.card__name {
+  margin: 0;
+  padding-bottom: 10px;
+}
+.card__image {
+  margin: 0;
+  padding-bottom: 10px;
+}
+.card__details {
+  padding: 10px;
+}
